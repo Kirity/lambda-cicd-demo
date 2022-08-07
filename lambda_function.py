@@ -1,4 +1,4 @@
 
 
 def lambda_handler(event, context):
-    print('From UI..')
+    print('From UI....')
