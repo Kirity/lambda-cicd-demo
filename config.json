@@ -1,5 +1,5 @@
 {
  "Parameters": {
-  "S3ArtifactStore": "lambda-cicd-demo-bucket-example"
+  "LambdaRoleName": "lambda-print-s3-buckets-iam-role"
  }
 }

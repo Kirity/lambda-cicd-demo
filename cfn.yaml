@@ -1,18 +1,14 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: 'This template deploys a basic stuff to get the aws account set up'
 Parameters:
-  S3ArtifactStore:
+  LambdaRoleName:
     Type: String
-    Description: Name of S3 bucket
-    Default: lambda-cicd-demo-bucket-example
-
+    Description: Lambda role name
 Resources:
-
-  # Common Lambda Role
   LambdaRole:
     Type: AWS::IAM::Role
     Properties:
-      RoleName: "lambda-role-example"
+      RoleName: !Ref LambdaRoleName
       Description: "Role assigned to lambdas"
       AssumeRolePolicyDocument:
         Version: "2012-10-17"
@@ -32,8 +28,6 @@ Resources:
                 Action:
                   - s3:*
                 Resource: '*'
-
-  # Lambda
   Lambda:
     Type: AWS::Lambda::Function
     Properties:
