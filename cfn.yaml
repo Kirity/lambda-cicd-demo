@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: 'This template deploys a basic stuff to get the aws account set up'
+Description: 'This template deploys Lambda function'
 Parameters:
   LambdaRoleName:
     Type: String
