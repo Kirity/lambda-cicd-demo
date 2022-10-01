@@ -1,3 +1,3 @@
 
 def lambda_handler(event, context):
-    print('From UI....5')
+    print('From UI....6')
